@@ -1,6 +1,3 @@
-
-
-	
 def harvest_sunflower():
 	#Usar siempre a la izquierda
 	size = get_world_size()
@@ -69,7 +66,7 @@ def do_column(crop, c=1):
 					do_fertilizer()
 				harvest()
 			crop(r)
-			r += 1
+			r += (get_world_size()%2) +1
 			move(North)
 		r += 1
 		move(East)
@@ -85,26 +82,20 @@ go_to(0,0)
 clear()
 
 while True:
-	#do_column(do_pumpkin, 8)
-	#do_column(do_carrot, 8)
-	#do_full_sunflower_field()
-	create_maze()
+	go_to(0,0)
+	create_maze(500)
 	continue
-	
-	
 	do_full_sunflower_field()
 	
-	do_column(do_pumpkin, 8)
+	do_column(do_pumpkin, 10)
 	
 	do_column(do_grass, 4)
-	do_column(do_wood, 4)
+	do_column(do_wood, 6)
 
-	do_column(do_grass, 8)
+	do_column(do_grass, 10)
 	
 	create_maze()
 	
-	do_column(do_carrot, 4)
+	do_column(do_carrot, 5)
 	do_column(do_grass, 2)
-	do_column(do_wood, 2)
-	
-		
+	do_column(do_wood, 3)	
