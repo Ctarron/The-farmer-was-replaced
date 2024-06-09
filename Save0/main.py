@@ -29,13 +29,20 @@ def un_till():
 	if get_ground_type() == Grounds.Soil:
 			till()
 
+timed_reset()
 
 harvest()
+
 go_to(0,0)
 
 clear()
 
-farm_cactus(500)
+while True:
+	#farm_cactus(5)
+	
+	do_dino(1)
+	
+	harvest()
 
 while True:
 	go_to(0,0)
