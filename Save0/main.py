@@ -33,16 +33,11 @@ timed_reset()
 
 harvest()
 
+do_speedrun()
+
 go_to(0,0)
 
 clear()
-
-while True:
-	#farm_cactus(5)
-	
-	do_dino(1)
-	
-	harvest()
 
 while True:
 	go_to(0,0)
